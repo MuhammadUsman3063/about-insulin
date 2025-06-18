@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Regular Insulin Information - Dark Theme Updated with Placeholders</title>
+<title>UMT Medical Awareness - Regular Insulin Information</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
   /* Global Reset */
   *, *::before, *::after {
@@ -39,37 +39,51 @@
     padding: 48px 24px 96px;
   }
 
-  /* Header */
+  /* Header - Enhanced Styling */
   header {
-    background: linear-gradient(135deg, #1e293b, #3b82f6, #2563eb);
+    /* Gradient slightly adjusted for better contrast with dark theme */
+    background: linear-gradient(135deg, #0e162a, #1a3c75, #0f172a); /* Darker blue tones */
     color: #f0f9ff;
     padding: 36px 24px;
-    position: sticky;
-    top: 0;
+    /* Removed position: sticky; top: 0; so header scrolls with content */
     z-index: 1000;
     display: flex;
-    align-items: center;
-    gap: 20px;
-    box-shadow: 0 10px 32px rgb(30 41 59 / 0.7);
+    flex-direction: column; 
+    align-items: center; /* Center horizontally */
+    gap: 15px; /* Reduced gap slightly */
+    box-shadow: 0 10px 32px rgba(30, 41, 59, 0.7);
     border-bottom: 1px solid #1e40af;
+    text-align: center; /* Ensures text is centered */
   }
+
   header img {
-    height: 48px;
+    height: 70px; /* Increased logo size slightly for more prominence */
     width: auto;
     user-select: none;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgb(59 130 246 / 0.7);
+    border-radius: 12px; /* Slightly more rounded */
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.7); /* Adjusted shadow */
     background: #1e40af;
+    padding: 5px; /* Added slight padding around logo */
   }
+
   header h1 {
     margin: 0;
-    font-weight: 700;
-    font-size: 2.5rem;
-    letter-spacing: 0.05em;
+    font-weight: 800; /* Bolder font weight */
+    font-size: 2.8rem; /* Slightly larger font size for main title */
+    letter-spacing: 0.06em; /* Increased letter spacing */
     user-select: none;
     line-height: 1.1;
     color: #e0e7ff;
-    text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.8); /* Stronger text shadow */
+  }
+
+  /* New: Subtitle for header */
+  header p.subtitle {
+    margin: 0;
+    font-size: 1.2rem; /* Subtitle font size */
+    color: #a5b4fc; /* Lighter color for subtitle */
+    letter-spacing: 0.03em;
+    font-weight: 400;
   }
 
   /* Sections */
@@ -78,12 +92,12 @@
     border-radius: 14px;
     padding: 40px 48px;
     margin-top: 48px;
-    box-shadow: 0 6px 30px rgb(99 102 241 / 0.25);
+    box-shadow: 0 6px 30px rgba(99, 102, 241, 0.25);
     transition: box-shadow 0.3s ease;
     color: #cbd5e1;
   }
   section:hover {
-    box-shadow: 0 14px 48px rgb(96 165 250 / 0.45);
+    box-shadow: 0 14px 48px rgba(96, 165, 250, 0.45);
   }
   section h2 {
     margin-top: 0;
@@ -135,7 +149,7 @@
     user-select: text;
     margin-top: 28px;
     color: #bfdbfe;
-    box-shadow: inset 0 0 14px rgb(96 165 250 / 0.5);
+    box-shadow: inset 0 0 14px rgba(96, 165, 250, 0.5);
   }
 
   /* Images container - multiple images with captions */
@@ -149,7 +163,7 @@
   .image-card {
     background: #273449;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgb(59 130 246 / 0.5);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
     max-width: 320px;
     width: 100%;
     text-align: center;
@@ -161,13 +175,13 @@
   .image-card:focus-within {
     transform: scale(1.04);
     outline: none;
-    box-shadow: 0 16px 48px rgb(96 165 250 / 0.7);
+    box-shadow: 0 16px 48px rgba(96, 165, 250, 0.7);
   }
   .image-card img {
     max-width: 100%;
     height: auto;
     border-radius: 14px;
-    box-shadow: 0 10px 28px rgb(59 130 246 / 0.7);
+    box-shadow: 0 10px 28px rgba(59, 130, 246, 0.7);
     margin-bottom: 16px;
   }
   .image-card figcaption {
@@ -212,7 +226,7 @@
     color: #cbd5e1;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 28px rgb(96 165 250 / 0.3);
+    box-shadow: 0 10px 28px rgba(96, 165, 250, 0.3);
   }
   table.interaction-table thead {
     background: #1e293b;
@@ -266,7 +280,10 @@
       margin-top: 40px;
     }
     header h1 {
-      font-size: 2rem;
+      font-size: 2.2rem; /* Adjusted for smaller screens */
+    }
+    header p.subtitle {
+      font-size: 1rem;
     }
     .image-gallery {
       gap: 20px;
@@ -275,18 +292,22 @@
   @media (max-width: 640px) {
     header {
       padding: 24px 16px;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 14px;
+      flex-direction: column; /* Stacks items vertically */
+      align-items: center; /* Centers them */
+      gap: 10px;
     }
     header img {
-      height: 36px;
-      border-radius: 6px;
-      box-shadow: 0 3px 12px rgb(59 130 246 / 0.7);
+      height: 55px; /* Adjusted logo size for very small screens */
+      border-radius: 8px;
+      box-shadow: 0 3px 12px rgba(59, 130, 246, 0.7);
+      padding: 4px;
     }
     header h1 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       line-height: 1.2;
+    }
+    header p.subtitle {
+      font-size: 0.9rem;
     }
     .container {
       padding: 32px 16px 64px;
@@ -319,7 +340,10 @@
 </head>
 <body>
 <header role="banner">
-<img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/785c2a86-2d40-48ff-acdd-4b18da993ca1.png" alt="Insulin vial with dark blue modern pharmaceutical label" />
+  <!-- University Logo with local path -->
+  <img src="university-logo.jpg" alt="UMT university logo" />
+  <h1>University of Management and Technology</h1>
+  <p class="subtitle">Medical Awareness: Regular Insulin Information</p>
 </header>
 <main class="container" role="main" aria-label="Regular Insulin detailed information">
   <section aria-labelledby="intro-title" tabindex="0">
@@ -373,7 +397,7 @@
     <ul>
       <li><strong>Absorption:</strong> Bioavailability 55-77% (subcutaneous), onset 0.5 hr, peak 0.8-2 hr, duration 4–12 hrs (U-100), up to 24 hrs (U-500)</li>
       <li><strong>Distribution Volume:</strong> 0.26-0.36 L/kg</li>
-      <li><strong>Metabolism:</strong> Liver (&gt;50%), kidney (~30%), adipose tissue/muscle (~20%)</li>
+      <li><strong>Metabolism:</strong> Liver (>50%), kidney (~30%), adipose tissue/muscle (~20%)</li>
       <li><strong>Excretion:</strong> Urine</li>
     </ul>
   </section>
@@ -416,7 +440,7 @@
     </ul>
     <h3>Humulin R U-500</h3>
     <ul>
-      <li>Unopened vials: Refrigerate 2-8°C until expiration; can store at room temperature &lt;30°C (86°F) for 40 days; do not shake vial</li>
+      <li>Unopened vials: Refrigerate 2-8°C until expiration; can store at room temperature <30°C (86°F) for 40 days; do not shake vial</li>
       <li>Opened vials: Refrigerate or room temperature ≤30°C, discard after 40 days</li>
     </ul>
     <h3>Humulin R KwikPen</h3>
@@ -498,7 +522,7 @@
 
   <section aria-labelledby="pen-device-title" tabindex="0">
     <h2 id="pen-device-title">Pen Device</h2>
-    <p><strong>Humulin R KwikPen:</strong> First FDA-approved prefilled pen device for U-500 strength insulin (500 units/mL) for patients needing &gt;200 units/day.</p>
+    <p><strong>Humulin R KwikPen:</strong> First FDA-approved prefilled pen device for U-500 strength insulin (500 units/mL) for patients needing >200 units/day.</p>
     <p><strong>Additional Pen Device Information:</strong></p>
     <ol>
       <li>Humulin R KwikPen allows accurate dosing with easy-to-read increments.</li>
@@ -509,6 +533,11 @@
       <li>Should be stored between 2–8°C before first use and can be kept at room temperature (below 30°C) for 28 days after first use.</li>
       <li>Proper disposal of the pen and needles is mandatory to prevent injury.</li>
     </ol>
+    <!-- New image added to Pen Device section -->
+    <div class="image-section" role="img" aria-label="Photo of insulin pen device for injection">
+      <img src="pen-side-image.png" alt="Insulin pen device" />
+      <figcaption>Modern insulin pen device for self-administration.</figcaption>
+    </div>
   </section>
 
   <section aria-labelledby="inhalation-insulin-title" tabindex="0">
@@ -536,8 +565,7 @@
   </section>
 </main>
 <footer>
-  &copy; 2025 Regular Insulin Reference | 
+  &copy; 2025 Regular Insulin Reference | University of Management and Technology
 </footer>
 </body>
 </html>
-
