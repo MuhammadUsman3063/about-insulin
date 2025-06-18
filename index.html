@@ -87,7 +87,7 @@
   }
 
   /*
-    New CSS for .image-section to style pen-side-image
+    CSS for .image-section to style individual images
   */
   .image-section {
     margin-top: 28px; /* Space from top */
@@ -100,10 +100,13 @@
     background: #273449; /* Slight background color */
     border-radius: 14px; /* Rounded corners */
     box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5); /* Subtle shadow */
+    max-width: 500px; /* Added max-width to control image section size */
+    margin-left: auto; /* For centering with max-width */
+    margin-right: auto; /* For centering with max-width */
   }
 
   .image-section img {
-    max-width: 60%; /* Max width to make image smaller */
+    max-width: 90%; /* Max width to make image smaller relative to its container */
     height: auto; /* Maintain aspect ratio */
     border-radius: 12px; /* Rounded corners for the image itself */
     box-shadow: 0 6px 20px rgba(59, 130, 246, 0.7); /* Shadow on the image */
@@ -114,7 +117,7 @@
     font-size: 0.95rem; /* Caption font size */
     font-style: italic; /* Italic text */
   }
-  /* End of New CSS for .image-section */
+  /* End of CSS for .image-section */
 
   /* Sections */
   section {
@@ -318,8 +321,8 @@
     .image-gallery {
       gap: 20px;
     }
-    .image-section img {
-      max-width: 75%; /* Responsive adjustment for smaller screens */
+    .image-section {
+      max-width: 90%; /* Wider on smaller screens */
     }
   }
   @media (max-width: 640px) {
@@ -368,8 +371,11 @@
       max-width: 280px;
       padding: 18px 12px 28px;
     }
+    .image-section {
+      max-width: 100%; /* Even wider on very small screens */
+    }
     .image-section img {
-      max-width: 90%; /* Further responsive adjustment for very small screens */
+      max-width: 95%; /* Further responsive adjustment for very small screens */
     }
   }
 </style>
@@ -451,20 +457,17 @@
       <li><strong>Storage of opened vials and pens:</strong> Follow temperature guidelines to maintain efficacy.</li>
       <li><strong>Disposal:</strong> Dispose of needles and pens safely to avoid injury or contamination.</li>
     </ol>
-    <p><strong>Additional Administration Steps (Humulin R):</strong></p>
-    <ol>
-      <li>Choose appropriate syringe or insulin pen compatible with Humulin R.</li>
-      <li>Inspect the vial or pen for clarity and expiration date; do not use if cloudy or past expiry.</li>
-      <li>Wash hands and clean injection site with alcohol swab.</li>
-      <li>If using a vial, roll it gently between palms to mix insulin; do not shake.</li>
-      <li>Draw up the correct dose by inserting needle into vial and pulling plunger slowly.</li>
-      <li>Remove air bubbles from syringe by flicking and pushing air out.</li>
-      <li>Pinch skin to create a fold and inject subcutaneously at 90-degree angle.</li>
-      <li>Hold needle in place for 5-10 seconds before withdrawal to ensure full dose delivery.</li>
-      <li>Dispose of syringe or pen needle in proper sharps container.</li>
-      <li>Rotate injection sites to avoid lipodystrophy.</li>
-      <li>Monitor blood glucose regularly per medical advice.</li>
-    </ol>
+    <!-- New Image: injection-insulin.jpg -->
+    <div class="image-section" role="img" aria-label="Image of insulin injection process">
+      <img src="injection-insulin.jpg" alt="Insulin Injection Process" />
+      <figcaption>Detailed overview of the insulin injection process.</figcaption>
+    </div>
+
+    <!-- Replaced "Additional Administration Steps (Humulin R)" heading and list with new image -->
+    <div class="image-section" role="img" aria-label="Image of Humulin R pen device">
+      <img src="humlin-R.png" alt="Humulin R Pen Device" />
+      <figcaption>Humulin R pen device for insulin self-administration.</figcaption>
+    </div>
   </section>
 
   <section aria-labelledby="storage-title" tabindex="0">
@@ -547,7 +550,7 @@
         <tr><td>Beta-Blockers (Beta1 Selective)</td><td><span class="legend-box monitor-therapy" aria-hidden="true"></span> Monitor therapy</td></tr>
       </tbody>
     </table>
-    <p>Note: Clinicians should use judgment based on up-to-date information and individual patient contexts when managing these interactions.</p>
+    <p>Note: Clinicians should use judgment based on up-to-date information and individual patient contexts when managing these interactions. **Reference: Lexicom Reference**</p>
   </section>
 
   <section aria-labelledby="toxicity-title" tabindex="0">
