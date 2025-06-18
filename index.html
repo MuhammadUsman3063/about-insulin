@@ -86,6 +86,36 @@
     font-weight: 400;
   }
 
+  /*
+    New CSS for .image-section to style pen-side-image
+  */
+  .image-section {
+    margin-top: 28px; /* Space from top */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack image and caption vertically */
+    align-items: center; /* Horizontally center contents */
+    text-align: center; /* Center caption text */
+    gap: 15px; /* Space between image and caption */
+    padding: 20px; /* Inner padding */
+    background: #273449; /* Slight background color */
+    border-radius: 14px; /* Rounded corners */
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5); /* Subtle shadow */
+  }
+
+  .image-section img {
+    max-width: 60%; /* Max width to make image smaller */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px; /* Rounded corners for the image itself */
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.7); /* Shadow on the image */
+  }
+
+  .image-section figcaption {
+    color: #a5b4fc; /* Caption color */
+    font-size: 0.95rem; /* Caption font size */
+    font-style: italic; /* Italic text */
+  }
+  /* End of New CSS for .image-section */
+
   /* Sections */
   section {
     background: #1e293b;
@@ -288,6 +318,9 @@
     .image-gallery {
       gap: 20px;
     }
+    .image-section img {
+      max-width: 75%; /* Responsive adjustment for smaller screens */
+    }
   }
   @media (max-width: 640px) {
     header {
@@ -334,6 +367,9 @@
     .image-card {
       max-width: 280px;
       padding: 18px 12px 28px;
+    }
+    .image-section img {
+      max-width: 90%; /* Further responsive adjustment for very small screens */
     }
   }
 </style>
